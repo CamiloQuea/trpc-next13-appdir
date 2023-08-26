@@ -8,7 +8,7 @@ export const TodoList = ({
 }: {
   initialTodos?: RouterOutputs["getTodos"];
 }) => {
-  const { data, refetch } = trpc.getTodos.useQuery(undefined, {
+  const { data, refetch, isFetching } = trpc.getTodos.useQuery(undefined, {
     initialData: initialTodos,
     enabled: false,
   });
@@ -16,6 +16,7 @@ export const TodoList = ({
     <div>
       <h1>TODO</h1>
       <button onClick={() => refetch()}>Refetch</button>
+      <div>{isFetching ? "Loading..." : null}</div>
       <pre>{JSON.stringify(data, undefined, 4)}</pre>
     </div>
   );
