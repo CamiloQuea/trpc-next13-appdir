@@ -1,8 +1,8 @@
 import { TodoList } from "@/components/TodoList";
-import { serverClient } from "@/lib/trpc/serverClient";
+import { apiServer } from "@/lib/trpc/server";
 
 export default async function Home() {
-  const todos = await serverClient.getTodos();
+  const todos = await apiServer.getTodos.query();
 
   return (
     <main className="container my-5">

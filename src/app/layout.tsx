@@ -1,7 +1,8 @@
-import Provider from "@/lib/trpc/Provider";
+import { TRPCReactProvider } from "@/lib/trpc/react-provider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} font-inter`}>
       <body>
-        <Provider>{children}</Provider>
+        <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
       </body>
     </html>
   );
