@@ -29,9 +29,6 @@ dependencies:
   autoprefixer:
     specifier: 10.4.15
     version: 10.4.15(postcss@8.4.28)
-  dotenv:
-    specifier: ^16.3.1
-    version: 16.3.1
   eslint:
     specifier: 8.48.0
     version: 8.48.0
@@ -847,6 +844,7 @@ packages:
   /dotenv@16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
     engines: {node: '>=12'}
+    dev: true
 
   /electron-to-chromium@1.4.554:
     resolution: {integrity: sha512-Q0umzPJjfBrrj8unkONTgbKQXzXRrH7sVV7D9ea2yBV3Oaogz991yhbpfvo2LMNkJItmruXTEzVpP9cp7vaIiQ==}
